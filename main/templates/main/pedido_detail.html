@@ -1,6 +1,11 @@
 {% extends "base2.html" %}
 
 {% block content %}
+ <div align="center">
+  <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/g_collection_png/standard/256x256/shopping_cart.png">
+
+  </div>
+
 <div class="container">
     <section class="mb-4">
         <div class="row wow fadeIn">
@@ -35,7 +40,7 @@
         </div>
     </div>
     <a href="{% url 'pedido-update' pk=object.pk %}" class='button is-info'>
-      Checkout
+      Confirmar Carrito
     </a>
     <hr>
     <div class="content">

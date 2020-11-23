@@ -25,13 +25,9 @@ class UserForm(UserCreationForm):
     genero = forms.ChoiceField(choices=GENERO_CHOICES)
 
     # Cliente attributes
-    is_cliente = forms.BooleanField(required=False)
     preferencias = forms.ModelChoiceField(queryset=Categoria.objects.all(), required=False)
 
-    # Colaborador attributes
-    is_colaborador = forms.BooleanField(required=False)
-    reputacion = forms.FloatField(required=False)
-    cobertura_entrega = forms.ModelChoiceField(queryset=Localizacion.objects.all(), required=False)
+
 
     class Meta:
         model = User
@@ -43,11 +39,8 @@ class UserForm(UserCreationForm):
         'fecha_nacimiento',
         'estado',
         'genero',
-        'is_cliente',
         'preferencias',
-        'is_colaborador',
-        'reputacion',
-        'cobertura_entrega',
+
         ]
 
 

@@ -40,7 +40,7 @@ class Colaborador(models.Model):
     user_profile = models.OneToOneField(Profile, on_delete=models.CASCADE)
 
     # Atributos especificos del Colaborador
-    reputacion = models.FloatField()
+    Reputacion = models.FloatField()
     cobertura_entrega = models.ManyToManyField(to='Localizacion')
 
     def __str__(self):
