@@ -23,7 +23,7 @@ class UserForm(UserCreationForm):
         (NO_BINARIO, 'No Binario')
     ]
     genero = forms.ChoiceField(choices=GENERO_CHOICES)
-
+    is_cliente = forms.BooleanField(required=False)
     # Cliente attributes
     preferencias = forms.ModelChoiceField(queryset=Categoria.objects.all(), required=False)
 
@@ -40,7 +40,7 @@ class UserForm(UserCreationForm):
         'estado',
         'genero',
         'preferencias',
-
+        'is_cliente',
         ]
 
 

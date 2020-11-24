@@ -21,6 +21,7 @@ class Profile(models.Model):
     ]
     genero = models.CharField(max_length=2, choices=GENERO_CHOICES)
 
+
     def __str__(self):
         return self.user.get_username()
 
