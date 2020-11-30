@@ -41,6 +41,7 @@ class UserForm(UserCreationForm):
         'genero',
         'preferencias',
         'is_cliente',
+                  
         ]
 
 

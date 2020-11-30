@@ -36,6 +36,8 @@ class Cliente(models.Model):
     def __str__(self):
         return f'Cliente: {self.user_profile.user.get_username()}'
 
+
+
 class Colaborador(models.Model):
     # Relacion con el modelo Perfil
     user_profile = models.OneToOneField(Profile, on_delete=models.CASCADE)
